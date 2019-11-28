@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCurrencyFlag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/currency_flag_eur" />
+
+    <TextView
+        android:id="@+id/textCurrencyCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black_pearl"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toEndOf="@+id/imageCurrencyFlag"
+        app:layout_constraintTop_toTopOf="@+id/imageCurrencyFlag"
+        tools:text="EUR" />
+
+    <TextView
+        android:id="@+id/textCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintStart_toEndOf="@+id/imageCurrencyFlag"
+        app:layout_constraintTop_toBottomOf="@+id/textCurrencyCode"
+        tools:text="Euro" />
+
+    <EditText
+        android:id="@+id/currencyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:inputType="numberDecimal"
+        android:maxLength="9"
+        android:textColor="@color/black_pearl"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:hint="1183.06" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
